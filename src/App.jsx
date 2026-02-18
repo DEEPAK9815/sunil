@@ -44,17 +44,21 @@ function App() {
         {/* Digital Business Card */}
         <div
           ref={cardRef}
-          className="bg-card p-8 rounded-2xl shadow-2xl border border-gray-700 max-w-md w-full relative overflow-hidden group hover:border-accent transition-colors duration-300"
+          className="relative group max-w-md w-full"
         >
-          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-gold to-accent"></div>
+          {/* Glassmorphism Background */}
+          <div className="absolute inset-0 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl z-0"></div>
 
-          <div className="flex flex-col items-center text-center">
-            {/* Photo Placeholder - Replace src with actual image */}
-            <div className="w-32 h-32 rounded-full border-4 border-gold p-1 mb-4 shadow-lg overflow-hidden bg-gray-800">
+          <div className="relative z-10 p-8 flex flex-col items-center text-center">
+            {/* Top Gradient Bar */}
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gold to-accent rounded-t-2xl"></div>
+
+            {/* Passport Size Photo */}
+            <div className="w-32 h-40 bg-white p-1 mb-6 shadow-xl rotate-1 transform hover:rotate-0 transition duration-300">
               <img
                 src="/profile.jpg"
                 alt="Sunil Kumar"
-                className="w-full h-full object-cover rounded-full"
+                className="w-full h-full object-cover border border-gray-200"
               />
             </div>
 
